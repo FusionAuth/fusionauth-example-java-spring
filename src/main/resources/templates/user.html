@@ -1,0 +1,9 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head><title>User Profile</title></head>
+<body>
+<h1>Welcome to the protected User page. Below is your OpenID profile information.</h1>
+<p>Profile: <span th:text="${profile}"></span></p>
+
+<h2>You can logout here: <a href="<YOUR_FUSIONAUTH_URL>/oauth2/logout?client_id=<YOUR_FUSIONAUTH_APP_CLIENT_ID>">Logout</a></h2>
+</body>
+</html>
