@@ -1,4 +1,4 @@
-package com.FusionAuthSpring.FusionAuthSpring;
+package io.fusionauth.example.spring;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

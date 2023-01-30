@@ -1,4 +1,4 @@
-package com.FusionAuthSpring.FusionAuthSpring.config;
+package io.fusionauth.example.spring.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

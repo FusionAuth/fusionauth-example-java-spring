@@ -1,4 +1,4 @@
-package com.FusionAuthSpring.FusionAuthSpring;
+package io.fusionauth.example.spring;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
