@@ -16,6 +16,7 @@ public class UserController {
     @RequestMapping("/user")
     public String userPage(Model model, @AuthenticationPrincipal OidcUser principal) {
         if (principal != null) {
+            System.out.println(principal.getClaims().toString());
             model.addAttribute("profile", principal.getClaims());
         }
         return "user";

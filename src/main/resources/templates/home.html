@@ -1,9 +1,17 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
-<head><title>Home Page</title></head>
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
+</head>
 <body>
-<h1>Hello !</h1>
-<p>Welcome to <span th:text="${appName}">Our App</span></p>
-
-<p>You can view your profile <a href="/user">here</a></p>
+<img class="header-image" th:src="@{/images/example_bank_logo.svg}" alt="ChangeBank Logo"/>
+<main class="welcome-container">
+    <h1 class="welcome-title">Welcome</h1>
+    <button class="button" onclick="window.location.href='/user'">Login</button>
+</main>
+<footer class="footer">
+    <p class="powered-by">Powered by</p>
+    <img th:src="@{/images/fusion_auth_logo.svg}" alt="FusionAuth Logo" class="fa-logo"/>
+</footer>
 </body>
 </html>

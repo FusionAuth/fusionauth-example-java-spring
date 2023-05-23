@@ -23,12 +23,14 @@ public class SecurityConfiguration {
 
         http
                 .authorizeRequests(a -> a
-                        .antMatchers("/").permitAll()
-                        .anyRequest().authenticated())
+                        .antMatchers("/", "/images/**", "/css/**")
+                            .permitAll()
+                        .anyRequest()
+                            .authenticated())
                 .oauth2Login(login -> login.authorizationEndpoint().authorizationRequestResolver(resolver));
 
         http.logout(logout -> logout
-                .logoutSuccessUrl("/"));
+                .logoutSuccessUrl("http://localhost:9011/oauth2/logout?client_id=e9fdb985-9173-4e01-9d73-ac2d60d1dc8e"));
 
         return http.build();
     }

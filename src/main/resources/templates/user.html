@@ -1,9 +1,35 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
-<head><title>User Profile</title></head>
+<head>
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}"/>
+</head>
 <body>
-<h1>Welcome to the protected User page. Below is your OpenID profile information.</h1>
-<p>Profile: <span th:text="${profile}"></span></p>
-
-<h2>You can logout here: <a href="http://localhost:9011/oauth2/logout?client_id=e9fdb985-9173-4e01-9d73-ac2d60d1dc8e">Logout</a></h2>
+<img class="header-image" th:src="@{/images/example_bank_logo.svg}" alt="ChangeBank Logo"/>
+<main class="account-container">
+    <div class="blue-container"></div>
+    <div class="oval-container">
+        <div class="img-container">
+            <img th:src="@{/images/user_icon.svg}" alt="User logo" class="user-icon"/>
+        </div>
+    </div>
+    <div class="profile-container">
+        <p class="profile-name" th:text="${profile.name}"></p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Email</td>
+                    <td th:text="${profile.email}"></td>
+                </tr>
+                <tr>
+                    <td>Birth Date:</td>
+                    <td th:text="${profile.birthdate}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+<div class="logout-button-container">
+    <button class="button logout-button" onclick="window.location.href='/logout'">Logout</button>
+</div>
 </body>
 </html>
