@@ -1,3 +1,6 @@
+**This repo is out of date and is archived. Check out [an updated tutorial on using FusionAuth with Java and Spring Boot](https://fusionauth.io/docs/quickstarts/quickstart-java-springboot-web) or [the updated GitHub repository](https://github.com/FusionAuth/fusionauth-quickstart-java-springboot-web).**
+
+
 # Example: Using Spring with FusionAuth
 
 The application demonstrates how to integrate FusionAuth into your spring application.
